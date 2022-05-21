@@ -41,4 +41,31 @@ If we want to create a `gcd` function, what can we name it given that there is a
 A type represents __ __ __ __.
 a collection of values
 
+Rewrite this function using pattern matching:
+```haskell
+factorial :: (Eq p, Num p) => p -> p
+factorial n =
+  if n == 1 then 1 else n * factorial (n - 1)
+```
+```haskell
+factorial :: (Eq p, Num p) => p -> p
+factorial 1 = 1
+factorial n = n * factorial (n - 1)
+```
 
+What special character in a pattern matching expression matches anything?
+`_`, as in `isVowel _ = False`.
+
+Rewrite the following function using pattern matching with guarded equations:
+```haskell
+sign :: (Ord a, Num a, Num b) => a -> b
+sign x =
+  if x < 0 then -1 else if x > 0 then 1 else 0
+```
+```haskell
+sign :: (Ord a, Num a, Num b) => a -> b
+sign x
+  | x < 0 = 1
+  | x > 0 = 1
+  | otherwise = 0
+```
