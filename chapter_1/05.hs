@@ -1,0 +1,1 @@
+-- Maybe because more can evalutate to True and False than numbers?

@@ -1,0 +1,2 @@
+-- it takes presedence over + operations
+-- it can be used as infix notation inside of ``
