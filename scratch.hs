@@ -15,3 +15,7 @@ sign x
   | x < 0 = 1
   | x > 0 = 1
   | otherwise = 0
+
+sumNums :: Num p => [p] -> p
+sumNums [] = 0
+sumNums (x : xs) = x + sumNums xs
